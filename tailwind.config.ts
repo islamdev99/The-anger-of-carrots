@@ -61,6 +61,16 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        theme: {
+          bg: "hsl(var(--theme-bg))",
+          text: "hsl(var(--theme-text))",
+          primary: "hsl(var(--theme-primary))",
+          secondary: "hsl(var(--theme-secondary))",
+          accent: "hsl(var(--theme-accent))",
+          border: "hsl(var(--theme-border))",
+          card: "hsl(var(--theme-card))",
+          "card-foreground": "hsl(var(--theme-card-foreground))",
+        },
       },
       keyframes: {
         "accordion-down": {

@@ -16,9 +16,9 @@ const HeroSection = () => {
       {/* Carrot pattern */}
       <div className="absolute inset-0 carrot-pattern"></div>
       
-      {/* Background grid */}
-      <div className="absolute inset-0 opacity-30 pointer-events-none">
-        <div className="w-full h-full bg-repeat bg-[length:200px_200px]" style={{ backgroundImage: `url(${bgTexture})` }}></div>
+      {/* Background image */}
+      <div className="absolute inset-0 opacity-90 pointer-events-none">
+        <div className="w-full h-full bg-no-repeat bg-cover bg-center" style={{ backgroundImage: `url(${bgTexture})` }}></div>
       </div>
       
       {/* Top border effect */}
@@ -68,13 +68,11 @@ const HeroSection = () => {
           <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-[#FF6B00] rounded-full shadow-lg z-10"></div>
           
           <div className="float-animation relative z-20">
-            <div className="pixel-border rounded-lg overflow-hidden">
-              <img 
-                src={gameLogo} 
-                alt="The Anger of Carrots Game" 
-                className="max-w-full h-auto shadow-2xl rounded-lg"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1A120B]/50 to-transparent"></div>
+            <div className="rounded-lg overflow-hidden">
+              <h2 className="font-pixel text-3xl text-[#FFF8E1] p-8 bg-[#E65100] rounded-lg shadow-2xl">
+                <span className="block">THE ANGER OF</span>
+                <span className="block mt-4 text-4xl">CARROTS</span>
+              </h2>
             </div>
           </div>
           

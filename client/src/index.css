@@ -4,8 +4,9 @@
 
 @layer base {
   :root {
-    --background: 28 86% 12%;
-    --foreground: 0 0% 98%;
+    /* Light mode variables */
+    --background: 43 100% 96%;
+    --foreground: 26 33% 18%;
     
     --carrot-primary: 25 100% 50%;
     --carrot-secondary: 132 53% 45%;
@@ -40,6 +41,38 @@
     --ring: 215 20.2% 65.1%;
 
     --radius: 0.5rem;
+    
+    /* Theme specific colors */
+    --theme-bg: 43 100% 96%;
+    --theme-text: 26 33% 18%;
+    --theme-primary: 25 100% 50%;
+    --theme-secondary: 132 53% 45%;
+    --theme-accent: 43 100% 51%;
+    --theme-border: 25 100% 50%;
+    --theme-card: 43 100% 96%;
+    --theme-card-foreground: 26 33% 18%;
+  }
+  
+  .dark {
+    /* Dark mode variables */
+    --background: 28 86% 12%;
+    --foreground: 0 0% 98%;
+    
+    --border: 26 33% 25%;
+    --input: 26 33% 25%;
+    
+    --card: 26 33% 15%;
+    --card-foreground: 0 0% 98%;
+    
+    /* Theme specific colors */
+    --theme-bg: 26 33% 10%;
+    --theme-text: 43 100% 94%;
+    --theme-primary: 25 100% 50%;
+    --theme-secondary: 132 53% 45%;
+    --theme-accent: 43 100% 51%;
+    --theme-border: 25 100% 45%;
+    --theme-card: 26 33% 15%;
+    --theme-card-foreground: 43 100% 94%;
   }
 }
 
@@ -49,7 +82,7 @@
   }
 
   body {
-    @apply bg-[#1A120B] text-[#FFF8E1] antialiased;
+    @apply bg-theme-bg text-theme-text antialiased transition-colors duration-300;
     background-image: url('/noise-pattern.png');
     background-repeat: repeat;
   }
@@ -199,6 +232,23 @@ section::before {
 
 .title-glow {
   text-shadow: 0 0 10px rgba(255, 107, 0, 0.7), 0 0 20px rgba(255, 107, 0, 0.5);
+}
+
+.dark .title-glow {
+  text-shadow: 0 0 10px rgba(255, 107, 0, 0.8), 0 0 20px rgba(255, 107, 0, 0.6), 0 0 30px rgba(255, 107, 0, 0.4);
+}
+
+/* Text styling for better readability */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.4;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+p {
+  line-height: 1.6;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .font-body {
