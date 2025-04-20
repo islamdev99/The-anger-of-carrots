@@ -7,10 +7,10 @@
     --background: 28 86% 12%;
     --foreground: 0 0% 98%;
     
-    --carrot-primary: 28 100% 50%;
-    --carrot-secondary: 120 53% 49%;
+    --carrot-primary: 25 100% 50%;
+    --carrot-secondary: 132 53% 45%;
     --carrot-accent: 43 100% 51%;
-    --carrot-dark: 26 33% 22%;
+    --carrot-dark: 26 33% 18%;
     --carrot-light: 43 100% 94%;
     
     --muted: 210 40% 96.1%;
@@ -25,14 +25,14 @@
     --card: 0 0% 100%;
     --card-foreground: 222.2 47.4% 11.2%;
 
-    --primary: 28 100% 50%; /* Carrot Primary */
+    --primary: 25 100% 50%; /* Carrot Primary - More intense orange */
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 120 53% 49%; /* Carrot Secondary */
+    --secondary: 132 53% 45%; /* Carrot Secondary - Deeper green */
     --secondary-foreground: 0 0% 98%;
 
     --accent: 43 100% 51%; /* Carrot Accent */
-    --accent-foreground: 26 33% 22%;
+    --accent-foreground: 26 33% 18%;
 
     --destructive: 0 100% 50%;
     --destructive-foreground: 210 40% 98%;
@@ -49,14 +49,52 @@
   }
 
   body {
-    @apply bg-[#3D2B1F] text-[#FFF8E1] antialiased;
+    @apply bg-[#1A120B] text-[#FFF8E1] antialiased;
+    background-image: url('/noise-pattern.png');
+    background-repeat: repeat;
   }
 }
 
-/* Pixel border */
+@font-face {
+  font-family: 'PixelFont';
+  src: url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Section Styling */
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: repeating-linear-gradient(
+    90deg,
+    #FF6B00,
+    #FF6B00 15px,
+    #4CAF50 15px,
+    #4CAF50 30px
+  );
+  z-index: 5;
+}
+
+/* Pixel border - Enhanced */
 .pixel-border {
   position: relative;
-  box-shadow: 0 0 0 6px #3D2B1F;
+  box-shadow: 0 0 0 6px #1A120B, 0 5px 15px rgba(0,0,0,0.5);
+  transform: rotate(-1deg);
+  transition: transform 0.3s ease;
+}
+
+.pixel-border:hover {
+  transform: rotate(1deg) scale(1.02);
 }
 
 .pixel-border::after {
@@ -71,40 +109,96 @@
   pointer-events: none;
 }
 
-/* Pixel button styling */
+/* Pixel button styling - Enhanced */
 .pixel-button {
-  transition: all 0.1s ease;
-  box-shadow: 0 6px 0 #3D2B1F;
+  font-family: 'Press Start 2P', cursive;
+  transition: all 0.15s ease;
+  box-shadow: 0 6px 0 #1A120B, 0 8px 12px rgba(0,0,0,0.3);
   transform: translateY(-3px);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pixel-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: 0.5s;
+}
+
+.pixel-button:hover:before {
+  left: 100%;
 }
 
 .pixel-button:active {
-  box-shadow: 0 2px 0 #3D2B1F;
+  box-shadow: 0 2px 0 #1A120B;
   transform: translateY(1px);
 }
 
 /* Animation for logo */
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+  0% { transform: translateY(0px) rotate(-2deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(-2deg); }
 }
 
 .float-animation {
   animation: float 4s ease-in-out infinite;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.4));
 }
 
-/* Pixel grid background */
+/* Battle animation */
+@keyframes battle-shake {
+  0% { transform: translate(0); }
+  20% { transform: translate(-4px, 4px); }
+  40% { transform: translate(4px, -4px); }
+  60% { transform: translate(-4px, -4px); }
+  80% { transform: translate(4px, 4px); }
+  100% { transform: translate(0); }
+}
+
+.battle-animation:hover {
+  animation: battle-shake 0.5s linear;
+}
+
+/* Pixel grid background - Enhanced */
 .pixel-bg {
+  background-color: #1A120B;
   background-image: 
-    linear-gradient(to right, rgba(61, 43, 31, 0.1) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(61, 43, 31, 0.1) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 107, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 107, 0, 0.1) 1px, transparent 1px);
   background-size: 24px 24px;
+  position: relative;
+}
+
+.pixel-bg:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/noise-texture.png');
+  background-repeat: repeat;
+  opacity: 0.1;
+  pointer-events: none;
 }
 
 /* Font classes */
 .font-pixel {
   font-family: 'Press Start 2P', cursive;
+  text-shadow: 2px 2px 0 #1A120B;
+  letter-spacing: 1px;
+}
+
+.title-glow {
+  text-shadow: 0 0 10px rgba(255, 107, 0, 0.7), 0 0 20px rgba(255, 107, 0, 0.5);
 }
 
 .font-body {
@@ -118,4 +212,64 @@
 /* For RTL compatibility */
 [dir="rtl"] .rtl-flip {
   transform: scaleX(-1);
+}
+
+/* Warrior theme elements */
+.warrior-border {
+  border-width: 4px;
+  border-style: solid;
+  border-image: repeating-linear-gradient(
+    45deg,
+    #FF6B00,
+    #FF6B00 10px,
+    #E65100 10px,
+    #E65100 20px
+  ) 1;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+}
+
+.section-title:before, .section-title:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 4px;
+  width: 30px;
+  background-color: #FF6B00;
+}
+
+.section-title:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.section-title:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+/* Battle damage effect */
+.battle-damage {
+  background-image: url('/battle-damage.png');
+  background-size: 100px 100px;
+  background-repeat: repeat;
+  opacity: 0.1;
+}
+
+/* Carrot theme elements */
+.carrot-pattern {
+  background-image: url('/carrot-pattern.png');
+  background-size: 60px 60px;
+  background-repeat: repeat;
+  opacity: 0.05;
+}
+
+/* Image display fixes */
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
 }
