@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 28 86% 12%;
+    --foreground: 0 0% 98%;
+    
+    --carrot-primary: 28 100% 50%;
+    --carrot-secondary: 120 53% 49%;
+    --carrot-accent: 43 100% 51%;
+    --carrot-dark: 26 33% 22%;
+    --carrot-light: 43 100% 94%;
+    
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 28 100% 50%; /* Carrot Primary */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 120 53% 49%; /* Carrot Secondary */
+    --secondary-foreground: 0 0% 98%;
+
+    --accent: 43 100% 51%; /* Carrot Accent */
+    --accent-foreground: 26 33% 22%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-[#3D2B1F] text-[#FFF8E1] antialiased;
+  }
+}
+
+/* Pixel border */
+.pixel-border {
+  position: relative;
+  box-shadow: 0 0 0 6px #3D2B1F;
+}
+
+.pixel-border::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  left: -4px;
+  right: -4px;
+  background: transparent;
+  border: 4px solid #FF6B00;
+  pointer-events: none;
+}
+
+/* Pixel button styling */
+.pixel-button {
+  transition: all 0.1s ease;
+  box-shadow: 0 6px 0 #3D2B1F;
+  transform: translateY(-3px);
+}
+
+.pixel-button:active {
+  box-shadow: 0 2px 0 #3D2B1F;
+  transform: translateY(1px);
+}
+
+/* Animation for logo */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.float-animation {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Pixel grid background */
+.pixel-bg {
+  background-image: 
+    linear-gradient(to right, rgba(61, 43, 31, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(61, 43, 31, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Font classes */
+.font-pixel {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.font-body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.arabic-text {
+  font-family: 'Cairo', sans-serif;
+}
+
+/* For RTL compatibility */
+[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}
