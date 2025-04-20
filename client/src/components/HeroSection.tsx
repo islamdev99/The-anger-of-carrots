@@ -1,8 +1,11 @@
 import { PixelButton } from "@/components/ui/pixel-button";
 import gameLogo from "@assets/the anger of carrot (3).png";
 import carrotChar from "@assets/messi (2).png";
-import bgTexture from "@assets/صورة يوتيوب مصغرة جبال بحيرة سفر رخيص.png";
+import bgTexture from "@assets/Sans_titre_485_20250324213200.webp";
 import nadhirImage from "@assets/3_20250308055924.webp";
+import carotRunImage from "@assets/carot (7) RUN.png";
+import GCImage from "@assets/GCI1.png";
+import CCImage from "@assets/CCI3.png";
 
 const HeroSection = () => {
   return (
