@@ -18,11 +18,9 @@ const Navbar = () => {
     <nav className="px-4 py-2 bg-[#FF6B00] text-white sticky top-0 z-50 shadow-md">
       <div className="container mx-auto flex flex-wrap items-center justify-between">
         <Link href="/" className="flex items-center">
-          {/* Logo */}
-          <img src="https://i.postimg.cc/wMtMWJhb/messi-2.png" alt="Carrot Logo" className="h-14 w-auto" />
           <div className="ml-4 rtl:mr-4 rtl:ml-0">
-            <span className="font-pixel text-lg block">CARROT</span>
-            <span className="arabic-text text-sm block">استوديو كاروت</span>
+            <span className="font-pixel text-xl block">CARROT CO</span>
+            <span className="arabic-text text-sm block font-cairo">استوديو كاروت</span>
           </div>
         </Link>
         
