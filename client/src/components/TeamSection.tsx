@@ -39,6 +39,11 @@ const TeamSection = () => {
       role: "من إدارة كاروت كو وكاتب GDD",
       image: carrotLogo
     }
+
+      name: "اياد عباس",
+      role: "مصمم مراحل اساسي للعبة",
+      image: carrotLogo
+    }
   ];
 
   return (
