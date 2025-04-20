@@ -62,12 +62,14 @@ const NewsSection = () => {
               key={index} 
               className="bg-[#E65100]/10 rounded-lg shadow-lg overflow-hidden border-2 border-[#E65100] transform transition-all duration-300 hover:scale-105 hover:-rotate-1"
             >
-              <div className="h-48 bg-[#1A120B] relative">
-                <img 
-                  src={item.imageUrl} 
-                  alt={item.title} 
-                  className="w-full h-full object-cover opacity-90"
-                />
+              <div className="h-32 bg-[#1A120B] relative">
+                <div className="w-full h-full flex items-center justify-center">
+                  <img 
+                    src={item.imageUrl} 
+                    alt={item.title} 
+                    className="max-h-28 max-w-32 object-contain opacity-90"
+                  />
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-4 rtl:right-0 rtl:left-auto">
                   <span className={`text-xs font-pixel text-white ${item.categoryColor} px-2 py-1 rounded`}>

@@ -1,5 +1,3 @@
-import { GithubIcon, LinkedinIcon, InstagramIcon, TwitterIcon } from "@/assets/icons";
-import teamLogo from "@assets/messi (2).png";
 import carrotLogo from "@assets/AOTC2.png";
 
 // إضافة صور فريق العمل الجديدة
@@ -14,56 +12,32 @@ const TeamSection = () => {
     {
       name: "إسلام إبراهيم",
       role: "مدير كاروت كو",
-      image: islamImage,
-      socialLinks: [
-        { icon: <InstagramIcon className="w-5 h-5" />, url: "#" },
-        { icon: <TwitterIcon className="w-5 h-5" />, url: "#" }
-      ]
+      image: islamImage
     },
     {
       name: "مروان خادمي",
       role: "مدير كاروت كو وكاتب القصة",
-      image: marwanImage,
-      socialLinks: [
-        { icon: <InstagramIcon className="w-5 h-5" />, url: "#" },
-        { icon: <TwitterIcon className="w-5 h-5" />, url: "#" }
-      ]
+      image: marwanImage
     },
     {
       name: "نذير سان",
       role: "مطور ألعاب ومن الإدارة",
-      image: nadhirImage,
-      socialLinks: [
-        { icon: <GithubIcon className="w-5 h-5" />, url: "#" },
-        { icon: <LinkedinIcon className="w-5 h-5" />, url: "#" }
-      ]
+      image: nadhirImage
     },
     {
       name: "زياد زيدو",
       role: "رسام محترف",
-      image: ziadImage,
-      socialLinks: [
-        { icon: <InstagramIcon className="w-5 h-5" />, url: "#" },
-        { icon: <LinkedinIcon className="w-5 h-5" />, url: "#" }
-      ]
+      image: ziadImage
     },
     {
       name: "مصطفى بوي ديف",
       role: "مطور ألعاب",
-      image: mustafaImage,
-      socialLinks: [
-        { icon: <GithubIcon className="w-5 h-5" />, url: "#" },
-        { icon: <LinkedinIcon className="w-5 h-5" />, url: "#" }
-      ]
+      image: mustafaImage
     },
     {
       name: "عمر القاج",
       role: "من إدارة كاروت كو وكاتب GDD",
-      image: carrotLogo,
-      socialLinks: [
-        { icon: <InstagramIcon className="w-5 h-5" />, url: "#" },
-        { icon: <TwitterIcon className="w-5 h-5" />, url: "#" }
-      ]
+      image: carrotLogo
     }
   ];
 
@@ -73,11 +47,9 @@ const TeamSection = () => {
         <h2 className="text-center font-pixel text-3xl text-[#FF6B00] mb-12">فريق كاروت كو</h2>
         
         <div className="text-center mb-10">
-          <img 
-            src={teamLogo} 
-            alt="Carrot Co Team" 
-            className="h-32 w-auto mx-auto mb-6 rounded-full pixel-border"
-          />
+          <div className="h-32 w-32 mx-auto mb-6 flex items-center justify-center rounded-full bg-[#FF6B00]">
+            <span className="font-pixel text-4xl text-white">C C</span>
+          </div>
           <p className="arabic-text text-xl text-gray-800 max-w-3xl mx-auto">
             نحن فريق مبدع من المطورين والفنانين المتحمسين لصناعة الألعاب. نسعى لتقديم تجارب ألعاب فريدة ومميزة تمزج بين الأسلوب الكلاسيكي والمحتوى العصري.
           </p>
@@ -95,16 +67,8 @@ const TeamSection = () => {
               </div>
               <h3 className="font-pixel text-md text-center text-[#3D2B1F] mb-1">{member.name}</h3>
               <p className="arabic-text text-center text-gray-600 mb-2 text-sm">{member.role}</p>
-              <div className="flex justify-center space-x-2 rtl:space-x-reverse">
-                {member.socialLinks.map((link, i) => (
-                  <a 
-                    key={i} 
-                    href={link.url} 
-                    className="text-[#FF6B00] hover:text-[#3D2B1F] transition-colors"
-                  >
-                    {link.icon}
-                  </a>
-                ))}
+              <div className="bg-[#FFF2D8] rounded-md p-2 text-center mt-2">
+                <span className="text-xs text-[#FF6B00] font-pixel">carrot-co.com</span>
               </div>
             </div>
           ))}
