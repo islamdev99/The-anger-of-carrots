@@ -1,3 +1,5 @@
+import carrotLogo from "@assets/messi (2).png";
+
 const Footer = () => {
   return (
     <footer className="bg-[#3D2B1F] py-10 text-white">
@@ -5,7 +7,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <img 
-              src="https://i.postimg.cc/wMtMWJhb/messi-2.png" 
+              src={carrotLogo} 
               alt="Carrot Logo" 
               className="h-16 w-auto mx-auto md:mx-0"
             />

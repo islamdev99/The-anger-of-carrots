@@ -1,10 +1,14 @@
+import newsImage1 from "@assets/the anger of carrot (3).png";
+import newsImage2 from "@assets/Sans_titre_485_20250324213200.webp";
+import newsImage3 from "@assets/bandicam_2025-03-25_23-13-20-686.webp";
+
 const NewsSection = () => {
   const newsItems = [
     {
       title: "إطلاق النسخة التجريبية",
       content: "تم إطلاق النسخة التجريبية من لعبة غضب الجزر على منصات itch.io و GameJolt!",
       date: "١٠ مارس، ٢٠٢٥",
-      imageUrl: "https://i.postimg.cc/52LdnSzD/the-anger-of-carrot-3.png",
+      imageUrl: newsImage1,
       category: "تحديث",
       categoryColor: "bg-[#FF6B00]"
     },
@@ -12,7 +16,7 @@ const NewsSection = () => {
       title: "شخصيات جديدة قادمة",
       content: "تعرف على الشخصيات الجديدة التي ستنضم للعبة في الإصدار النهائي!",
       date: "٢٥ فبراير، ٢٠٢٥",
-      imageUrl: "https://i.postimg.cc/mrBsJJ5Z/Sans-titre-485-20250324213200.webp",
+      imageUrl: newsImage2,
       category: "شخصيات",
       categoryColor: "bg-[#4CAF50]"
     },
@@ -20,7 +24,7 @@ const NewsSection = () => {
       title: "مستويات جديدة",
       content: "اكتشف تفاصيل المستويات الجديدة وتحدياتها المميزة في التحديث القادم.",
       date: "١٥ يناير، ٢٠٢٥",
-      imageUrl: "https://i.postimg.cc/BnH0hh2D/bandicam-2025-03-25-23-13-20-686.webp",
+      imageUrl: newsImage3,
       category: "مستويات",
       categoryColor: "bg-[#FFC107]"
     }

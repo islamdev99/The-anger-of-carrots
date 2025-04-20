@@ -1,10 +1,13 @@
 import { PixelButton } from "@/components/ui/pixel-button";
+import gameLogo from "@assets/the anger of carrot (3).png";
+import carrotChar from "@assets/messi (2).png";
+import bgTexture from "@assets/صورة يوتيوب مصغرة جبال بحيرة سفر رخيص.png";
 
 const HeroSection = () => {
   return (
     <section id="home" className="min-h-screen flex items-center relative overflow-hidden pixel-bg" style={{ backgroundColor: "#FF6B00" }}>
       <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1608010986688-f0872a9220f0?auto=format&fit=crop&q=80&w=1000')] bg-repeat bg-[length:200px_200px]"></div>
+        <div className="w-full h-full bg-repeat bg-[length:200px_200px]" style={{ backgroundImage: `url(${bgTexture})` }}></div>
       </div>
       
       <div className="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center justify-between relative z-10">
@@ -36,7 +39,7 @@ const HeroSection = () => {
           <div className="float-animation">
             <div className="pixel-border rounded-lg overflow-hidden">
               <img 
-                src="https://i.postimg.cc/52LdnSzD/the-anger-of-carrot-3.png" 
+                src={gameLogo} 
                 alt="The Anger of Carrots Game" 
                 className="max-w-full h-auto shadow-2xl rounded-lg"
               />
@@ -44,7 +47,7 @@ const HeroSection = () => {
           </div>
           <div className="absolute -bottom-6 -right-6 w-24 h-24 animate-bounce">
             <img 
-              src="https://i.postimg.cc/wMtMWJhb/messi-2.png" 
+              src={carrotChar} 
               alt="Carrot Character" 
               className="w-full h-full"
             />

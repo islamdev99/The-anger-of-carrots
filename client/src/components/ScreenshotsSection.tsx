@@ -1,29 +1,37 @@
 import { PixelBorder } from "@/components/ui/pixel-border";
 
+// Import local images
+import screenshot1 from "@assets/bandicam_2025-03-24_22-13-59-998.webp";
+import screenshot2 from "@assets/bandicam_2025-03-25_23-13-20-686.webp";
+import screenshot3 from "@assets/bandicam_2025-03-25_23-13-52-889.webp";
+import screenshot4 from "@assets/Sans_titre_485_20250324213200.webp";
+import screenshot5 from "@assets/the anger of carrot (3).png";
+import screenshot6 from "@assets/9395bd4a-df96-442c-8bbb-9dafde420341.png";
+
 const ScreenshotsSection = () => {
   const screenshots = [
     {
-      src: "https://i.postimg.cc/Xv4TBGHL/bandicam-2025-03-24-22-13-59-998.webp",
+      src: screenshot1,
       alt: "Game Screenshot - Landscape"
     },
     {
-      src: "https://i.postimg.cc/BnH0hh2D/bandicam-2025-03-25-23-13-20-686.webp",
+      src: screenshot2,
       alt: "Game Screenshot - Gas Station"
     },
     {
-      src: "https://i.postimg.cc/6pGCc19j/bandicam-2025-03-25-23-13-52-889.webp",
+      src: screenshot3,
       alt: "Game Screenshot - Building"
     },
     {
-      src: "https://i.postimg.cc/mrBsJJ5Z/Sans-titre-485-20250324213200.webp",
+      src: screenshot4,
       alt: "Game Screenshot - Characters"
     },
     {
-      src: "https://i.postimg.cc/52LdnSzD/the-anger-of-carrot-3.png",
+      src: screenshot5,
       alt: "Game Screenshot - Logo"
     },
     {
-      src: "https://i.postimg.cc/cCxvTdBW/9395bd4a-df96-442c-8bbb-9dafde420341.png",
+      src: screenshot6,
       alt: "Game Screenshot - Characters Fighting"
     }
   ];
