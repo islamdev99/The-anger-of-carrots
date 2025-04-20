@@ -30,16 +30,12 @@ const TeamSection = () => {
       image: ziadImage
     },
     {
-      name: "مصطفى بوي ديف",
-      role: "مطور ألعاب",
+      name: "اياد عباس",
+      role: " مطور ألعاب و مصمم مراحل اساسي",
       image: mustafaImage
     },
     {
- 
-      name: "اياد عباس",
-      role: "مصمم مراحل اساسي للعبة",
-      image: carrotLogo
-    }
+   
   ];
 
   return (
