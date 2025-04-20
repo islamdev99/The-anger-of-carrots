@@ -9,14 +9,14 @@ import ContactSection from "@/components/ContactSection";
 import GameFactsSection from "@/components/GameFactsSection";
 import Footer from "@/components/Footer";
 import { SettingsMenu } from "@/components/ui/settings-menu";
-import { LogoCorner } from "@/components/ui/logo-corner";
 import { PromoBanner } from "@/components/ui/promo-banner";
+import { SocialSidebar } from "@/components/ui/social-sidebar";
 
 const Home = () => {
   return (
     <>
       <SettingsMenu />
-      <LogoCorner />
+      <SocialSidebar />
       <Navbar />
       <HeroSection />
       <TrailerSection />

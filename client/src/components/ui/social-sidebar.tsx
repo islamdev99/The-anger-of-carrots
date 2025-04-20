@@ -1,5 +1,5 @@
 import React from 'react';
-import { YoutubeIcon, InstagramIcon, GithubIcon, TwitterIcon } from '@/components/assets/icons';
+import { YoutubeIcon, InstagramIcon, GithubIcon, TwitterIcon } from '@/assets/icons';
 
 interface SocialSidebarProps {
   className?: string;
